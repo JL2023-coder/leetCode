@@ -13,13 +13,8 @@ impl Solution {
         for (&key, &value) in &map {
             let to_find = k - key;
             let value_2 = map.get(&to_find).copied().unwrap_or(0);
-            println!("{}  {}", value, value_2);
-
             max += min(value, value_2);
         }
-
-        println!("{:?}", map);
-
         return max / 2;
     }
 }
