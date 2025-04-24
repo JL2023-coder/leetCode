@@ -22,12 +22,13 @@ impl Solution {
                 }
                 *c += 1;
 
-                if counter >= distinct_values {
-                    res += 1;
+                if counter == distinct_values {
+                    res += nums.len() - j;
+                    break;
                 }
             }
         }
 
-        return res;
+        return res as i32;
     }
 }
